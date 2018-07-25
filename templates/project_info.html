@@ -9,5 +9,14 @@
 	 {{ description }}
 	<h3>Maximum grade:</h3>
 	{{ max_grade }}
+
+	<h3>Recorded grades:</h3>
+		<ul>
+			{% for grade in grades %}
+			<li><a href="/student?github={{ grade[0] }}">{{grade[0]}}</a>: {{ grade[1] }}</li>
+			{% endfor %}
+
+		</ul>
+
 </body>
 </html>
